@@ -1,0 +1,21 @@
+apply plugin: 'pmd'
+
+task pmd(type: Pmd, dependsOn: "assembleDebug") {
+    description 'Identifying potential problems mainly dead code, duplicated code, cyclomatic complexity and overcomplicated expressions'
+    group 'verification'
+
+    ignoreFailures = true
+
+    source = fileTree('src/main/java')
+    include '**/*.java'
+    exclude '**/gen/**'
+
+    reports {
+        xml.enabled = true
+        html.enabled = !xml.isEnabled()
+        xml.destination file("$project.buildDir/reports/pmd-output.xml")
+        html.destination file("$project.buildDir/reports/pmd-output.html")
+    }
+}
+
+check.dependsOn 'pmd'

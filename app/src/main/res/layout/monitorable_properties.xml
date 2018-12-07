@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="monitorableProperty"
+            type="br.com.neolog.cplmobile.monitorable.model.MonitorableProperty" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/small"
+            android:layout_marginRight="@dimen/small"
+            android:text="@{monitorableProperty.propertyName}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/label_normal"
+            android:textStyle="bold"
+            tools:text="propertyName:" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{monitorableProperty.propertyValue}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/label_normal"
+            tools:text="propertyValue" />
+    </LinearLayout>
+</layout>

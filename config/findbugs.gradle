@@ -1,0 +1,28 @@
+apply plugin: 'findbugs'
+
+task findbugs(type: FindBugs, dependsOn: "assembleDebug") {
+    description 'Find bugs mainly design flaws, bad practices, multithreaded correctness and code vulnerabilities.'
+    group 'verification'
+
+    ignoreFailures = true
+    effort = 'max'
+    reportLevel = 'high'
+    excludeFilter = new File("${project.rootDir}/config/findbugs-filter.xml")
+    classes = files("${project.rootDir}/app/build/intermediates/javac")
+
+    source 'src'
+    include '**/*.java'
+    exclude '**/gen/**'
+
+    reports {
+        xml.enabled = true
+        xml.withMessages = true
+        html.enabled = !xml.isEnabled()
+        xml.destination file("$project.buildDir/reports/findbugs-output.xml")
+        html.destination file("$project.buildDir/reports/findbugs-output.html")
+    }
+
+    classpath = files()
+}
+
+check.dependsOn 'findbugs'

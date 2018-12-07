@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@null</item>
+        <item name="colorPrimary">@color/primary_collor</item>
+        <item name="colorPrimaryDark">@color/primary_collor</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorTertiary">@color/second_collor</item>
+        <item name="editTextColor">@color/second_collor</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="android:navigationBarColor">@color/primary_collor</item>
+
+    </style>
+
+    <!-- ICONE HAMBURGER DO NAVIGATION DRAWER-->
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/white</item>
+    </style>
+    <!-- COR DOS TEXTO IMPUT_TEXT_LAYOUT  -->
+    <style name="MyAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AppTheme.TextFloatLabelAppearance" parent="TextAppearance.Design.Hint">
+        <!--Floating label appearance here-->
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/label_sub_title</item>
+        <item name="android:cursorVisible">true</item>
+    </style>
+
+
+    <style name="MyAppearanceSwitch" parent="Theme.AppCompat">
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">@color/red</item>
+
+        <!-- colorPrimaryDark is used for the status bar -->
+        <item name="colorPrimaryDark">@color/second_collor</item>
+        <!-- colorAccent is used as the default value for colorControlActivated,
+             which is used to tint widgets -->
+        <item name="colorSwitchThumbNormal">@color/second_collor</item>
+        <item name="colorAccent">@color/red</item>
+
+        <!-- You can also set colorControlNormal, colorControlActivated
+             colorControlHighlight, and colorSwitchThumbNormal. -->
+
+    </style>
+
+    <!-- SEARCH VIEW OCCURRENCE -->
+    <style name="searchViewAppearance" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="StyledTilEditText">
+        <item name="android:theme">@style/MyAppearance</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:textColorHint">@color/second_collor</item>
+        // Cor texto(hint) sem foco
+    </style>
+
+</resources>

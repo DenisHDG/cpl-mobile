@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="loading"
+            type="boolean" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_grey"
+        tools:context=".MainActivity">
+
+        <include layout="@layout/content_main" />
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/activity_main_fab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/medium"
+            android:visibility="gone"
+            app:fab_showShadow="true"
+            app:menu_backgroundColor="#ccffffff"
+            app:menu_colorNormal="@color/second_collor"
+            app:menu_colorPressed="@color/white"
+            app:menu_colorRipple="@color/second_collor"
+            app:menu_fab_label="Choose an action"
+            app:menu_labels_colorNormal="@color/second_collor"
+            app:menu_shadowColor="@color/second_collor"
+            app:menu_showShadow="true"
+            tools:ignore="VectorDrawableCompat">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/floatingActionButton_finish"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_check_black_24dp"
+                app:fab_colorNormal="@color/second_collor"
+                app:fab_colorPressed="@color/second_collor"
+                app:fab_colorRipple="@color/white"
+                app:fab_label="@string/finish_monitorable"
+                app:fab_shadowColor="@color/second_collor"
+                app:fab_size="mini"
+                app:rippleColor="@color/white" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/floatingActionButton_occurrence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_error_outline_white_24dp"
+                app:fab_colorNormal="@color/second_collor"
+                app:fab_colorPressed="@color/second_collor"
+                app:fab_colorRipple="@color/white"
+                app:fab_label="@string/report_occurrence"
+                app:fab_shadowColor="@color/second_collor"
+                app:fab_size="mini"
+                app:rippleColor="@color/white" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add_a_photo_black_24dp"
+                app:fab_colorNormal="@color/second_collor"
+                app:fab_colorPressed="@color/second_collor"
+                app:fab_colorRipple="@color/white"
+                app:fab_label="@string/repot_occurrence_archive"
+                app:fab_shadowColor="@color/second_collor"
+                app:fab_size="mini"
+                app:rippleColor="@color/white" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/floatingActionButton_delay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_restore_black_24dp"
+                app:fab_colorNormal="@color/second_collor"
+                app:fab_colorPressed="@color/second_collor"
+                app:fab_label="@string/report_delay"
+                app:fab_shadowColor="@color/second_collor"
+                app:fab_size="mini"
+                app:rippleColor="@color/white" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/floatingActionButton_spent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_attach_money_black_24dp"
+                app:fab_colorNormal="@color/second_collor"
+                app:fab_colorPressed="@color/second_collor"
+                app:fab_label="@string/report_spent"
+                app:fab_shadowColor="@color/second_collor"
+                app:fab_size="mini"
+                app:rippleColor="@color/white" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_map_black_24dp"
+                app:fab_colorNormal="@color/second_collor"
+                app:fab_colorPressed="@color/second_collor"
+                app:fab_label="@string/to_route"
+                app:fab_shadowColor="@color/second_collor"
+                app:fab_size="mini"
+                app:rippleColor="@color/white" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_group_add_black_24dp"
+                app:fab_colorNormal="@color/second_collor"
+                app:fab_colorPressed="@color/second_collor"
+                app:fab_label="@string/change_driver"
+                app:fab_shadowColor="@color/second_collor"
+                app:fab_size="mini"
+                app:rippleColor="@color/white" />
+        </com.github.clans.fab.FloatingActionMenu>
+
+        <ProgressBar
+            android:id="@+id/indeterminateBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:visible="@{loading}" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

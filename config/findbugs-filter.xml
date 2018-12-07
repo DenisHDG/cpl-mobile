@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+    <Match>
+        <Class name="~.*\.R\$.*" />
+    </Match>
+    <Match>
+        <Class name="~.*\.Manifest\$.*" />
+    </Match>
+    <!-- Dagger auto-generated -->
+    <Match>
+        <Class name="~.*Dagger*.*"/>
+    </Match>
+    <!-- Todas as classes de teste, exceto bugs específicos do JUnit -->
+    <Match>
+        <Class name="~.*\.*Test" />
+        <Not>
+            <Bug code="IJU" />
+        </Not>
+    </Match>
+    <!-- Butterknife auto-generated -->
+    <Match>
+        <Class name="~.*\$\$ViewBinder*"/>
+    </Match>
+    <Match>
+        <Class name="~.*\$\$ViewBinder\$InnerUnbinder*"/>
+    </Match>
+</FindBugsFilter>

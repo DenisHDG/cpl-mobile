@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".transition.HistoricViewHolder">
+
+    <data>
+
+        <variable
+            name="event"
+            type="br.com.neolog.cplmobile.event.Event" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium"
+                android:layout_marginLeft="@dimen/medium"
+                android:background="@drawable/round_image"
+                android:padding="@dimen/medium"
+                android:textColor="#fff"
+                app:srcCompat="@drawable/ic_add_a_photo_black_24dp"
+                android:contentDescription="@string/comments" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/small"
+                android:layout_marginLeft="@dimen/small"
+                android:background="@color/third_collor"
+                android:focusable="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/medium"
+            android:padding="@dimen/small"
+            android:background="@drawable/card_historic_occurrence"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{event.identifier}"
+                android:textSize="@dimen/label_normal"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/label_normal"
+                android:text="@{event.date}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/label_normal"
+                android:text='@{(event.location.latitude != null ? event.location.latitude.toString() : "") + " " + (event.location.longitude != null ? event.location.longitude.toString() : "")}' />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:layout_marginTop="@dimen/medium"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView_iconMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_image"
+                    android:padding="@dimen/small"
+                    android:textColor="#fff"
+                    app:srcCompat="@drawable/ic_sms_black_20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 comentários"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/label_mini"
+                    android:textAlignment="gravity" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,150 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- ordenar alfabeticamente -->
+    <string name="absence_transition">Ausência de\n transição</string>
+    <string name="accident">Acidente</string>
+    <string name="app_name">Cockpit Logistico</string>
+    <string name="add_coment">Adicionar comentário</string>
+    <string name="cancel">Cancelar</string>
+    <string name="cause">Causa:</string>
+    <string name="category">Categoria:</string>
+    <string name="change_driver">Trocar o motorista</string>
+    <string name="choose_file">Escolher arquivos</string>
+    <string name="comments">Comentários</string>
+    <string name="completion_status_cancelled">Cancelado</string>
+    <string name="completion_status_created">Criado</string>
+    <string name="completion_status_finished">Finalizado</string>
+    <string name="completion_status_in_execution">Em execução</string>
+    <string name="confirmation">Confirmação</string>
+    <string name="copyright">Copyright © 2002-2018 - Neolog</string>
+    <string name="document">Documento</string>
+    <string name="error">Erro</string>
+    <string name="error_on_obtain_lat_long">Erro ao obter localização atual, por favor refaça a operação.</string>
+    <string name="expand">Expandir</string>
+    <string name="failure_mechanical">Falha \n Mecânica</string>
+    <string name="finish_monitorable">Finalizar</string>
+    <string name="finish_monitorable_confirmation">Deseja finalizar o monitorável?\nEsta ação é irreversível.</string>
+    <string name="finish_monitorable_success">Monitorável finalizado com sucesso</string>
+    <string name="finalize_trip">Finalizar a viagem</string>
+    <string name="financial_impac">Impacto financeiro</string>
+    <string name="reversal">Estorno</string>
+    <string name="historic">Histórico</string>
+    <string name="image_not_found">Imagem não encontrada</string>
+    <string name="image_search">Busca de Imagem</string>
+    <string name="img_desc_1h_delay">1 hora</string>
+    <string name="img_desc_2h_delay">2 horas</string>
+    <string name="img_desc_30_min_delay">30 minutos</string>
+    <string name="img_desc_collapse_stop">Contrair parada</string>
+    <string name="img_desc_expand_stop">Expandir parada</string>
+    <string name="img_desc_logo_cockpit_logistico">Logo Cockpit Logístico</string>
+    <string name="img_desc_spent_100">100 reais</string>
+    <string name="img_desc_spent_20">20 reais</string>
+    <string name="img_desc_spent_50">50 reais</string>
+    <string name="img_desc_transition_finalized">Transição finalizada</string>
+    <string name="img_desc_transition_in_execution">Transição em execução</string>
+    <string name="img_desc_transition_not_realized">Transição não realizada</string>
+    <string name="invoice">Nota Fiscal</string>
+    <string name="late_status_delayed">Atrasado</string>
+    <string name="late_status_in_time">Em tempo</string>
+    <string name="late_status_warning">Aviso</string>
+    <string name="logout">Sair</string>
+    <string name="lorem_ipsum_1">Lorem ipsum dolor sit amet</string>
+    <string name="lorem_ipsum_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec neque vel elit dictum posuere. Nullam non ligula ornare, accumsan mi eget, egestas purus. Duis faucibus metus nec nisl blandit, sed viverra sapien tincidunt. Aenean bibendum, velit ac pretium condimentum, ex massa laoreet orci, ac vehicula nulla lacus ac sem. Proin id mi eu lectus rutrum pretium. Nam tempor lobortis mauris, non imperdiet metus lobortis vitae. Aliquam volutpat est et lorem dapibus euismod. Pellentesque suscipit dapibus elit, ut luctus tellus venenatis et.</string>
+    <string name="monitorable_carrier">Transportadora</string>
+    <string name="monitorable_distance">Distancia planejada (km)</string>
+    <string name="monitorable_estimated_end">Final estimado</string>
+    <string name="monitorable_expected_end">Final planejado</string>
+    <string name="monitorable_plate">Placa</string>
+    <string name="monitorable_realized_distance">Distancia percorrida (km)</string>
+    <string name="monitorable_status">Status</string>
+    <string name="monitorable_type_document">Documento</string>
+    <string name="monitorable_type_invoice">Nota fiscal</string>
+    <string name="monitorable_type_trip">Viagem</string>
+    <string name="monitorable_vehicle">Veículo</string>
+    <string name="name_company">Nome da empresa</string>
+    <string name="name_mot">João Pedro Paulo</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="new_occurrence">Nova ocorrência</string>
+    <string name="negative">-</string>
+    <string name="neolog_description">Torre de Otimização e Controle Logístico</string>
+    <string name="no">Não</string>
+    <string name="no_monitorable_available" tools:ignore="Typos">Nada a fazer no momento</string>
+    <string name="occurrence_cause_search">Pesquisar por causas . . .</string>
+    <string name="not_implemented">Texto não implementado</string>
+    <string name="operation_error">operação falhou.</string>
+    <string name="operation_success">operação concluída com êxito.</string>
+    <string name="operations_error">operações falharam.</string>
+    <string name="operations_success">operações concluídas com êxito.</string>
+    <string name="occurrence_confirmation_message">Tem certeza que deseja criar uma ocorrência?"</string>
+    <string name="occurrence_spent_one_click_title">Valor da ocorrência</string>
+    <string name="occurrence_spent_value">Valor</string>
+    <string name="occurrence_spent_other_value">Outro valor</string>
+    <string name="occurrence_spent_save">Salvar</string>
+    <string name="occurrence_delay_one_click_title">Tempo da ocorrência</string>
+    <string name="occurrence_delay_other_value">Outro valor</string>
+    <string name="occurrence_delay_save">Salvar</string>
+    <string name="occurrence_delay_days">Dias</string>
+    <string name="occurrence_delay">Atraso</string>
+    <string name="occurrence_advance">Adiantamento</string>
+    <string name="occurrence_delay_hours">Horas</string>
+    <string name="occurrence_delay_minutes">Minutos</string>
+    <string name="occurrence_confirmation_spent_message">Tem certeza que deseja criar uma ocorrência de $"%.2f" de "\"%s\"" </string>
+    <string name="occurrence_confirmation_delay_message">Tem certeza que deseja criar uma ocorrência de "%s" de "\"%s\"" </string>
+    <string name="occurrence_selection">Seleção de Ocorrência</string>
+    <string name="occurrece_save_success_message">Ocorrência criada com sucesso!</string>
+    <string name="occurrece_save_success_title">Sucesso</string>
+    <string name="optional">Opcional</string>
+    <string name="ok">OK</string>
+    <string name="password">Senha</string>
+    <string name="path">Trajeto</string>
+    <string name="positive">+</string>
+    <string name="quantityImpact">Impacto quantitativo</string>
+    <string name="remote_exception_handler_forbbiden">Acesso negado</string>
+    <string name="remote_exception_handler_internal_server_error">Erro interno do servidor</string>
+    <string name="remote_exception_handler_not_found">URL não encontrada</string>
+    <string name="remote_exception_handler_timeout">Servidor demorou muito para responder</string>
+    <string name="remote_exception_handler_unauthorized">Não autorizado</string>
+    <string name="report_delay">Reportar um atraso</string>
+    <string name="report_occurrence">Reportar uma ocorrência</string>
+    <string name="report_spent">Reportar um gasto</string>
+    <string name="repot_occurrence_archive">Enviar um arquivo para ocorrencia rápida</string>
+    <string name="save">Salvar</string>
+    <string name="send">Enviar</string>
+    <string name="shipping_company">Transportadora:</string>
+    <string name="shipping_company_name">Expresslog</string>
+    <string name="status">Status:</string>
+    <string name="status_name">Em execução</string>
+    <string name="stop">Parada</string>
+    <string name="success">Sucesso</string>
+    <string name="swing">Balanço</string>
+    <string name="take_picture">Tirar foto</string>
+    <string name="temporalImpact">Impacto temporal</string>
+    <string name="to_route">Ir para a rota</string>
+    <string name="transaction_already_finalized">A transição já foi finalizada</string>
+    <string name="transactions_in_stop_already_finalized">Todas transições dessa parada já foram finalizadas</string>
+    <string name="trip">Viagem</string>
+    <string name="trip_status">Em Tempo</string>
+    <string name="trip_stop_group_message">Tem certeza que deseja alterar o status da parada para %s?</string>
+    <string name="trip_stop_transition_message">Tem certeza que deseja alterar o status da transição para %s?</string>
+    <string name="user">Usuário</string>
+    <string name="waiting_time">Tempo de \n Espera</string>
+    <string name="warning">Aviso</string>
+    <string name="write_comment">Escreva um comentário...</string>
+    <string name="yes">Sim</string>
+    <string name="teste">Teste</string>
+    <!-- Images content strings-->
+    <string name="logo_cockpit">Logo cockpit</string>
+    <string name="logo_neolog">Logo neolog</string>
+    <string name="check">check</string>
+
+
+    <string-array name="minutes_options">
+        <item>0</item>
+        <item>15</item>
+        <item>30</item>
+        <item>45</item>
+    </string-array>
+    <string name="file_provider_authority" translatable="false">com.quiro.fileproviderexample.fileprovider</string>
+
+
+</resources>

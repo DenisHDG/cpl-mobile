@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/small">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small"
+            android:layout_marginLeft="@dimen/small"
+            android:src="@mipmap/tip_left" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="55dp"
+            android:layout_marginRight="55dp"
+            android:background="@drawable/border_message_left"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/medium"
+                android:text="@string/transactions_in_stop_already_finalized"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/small">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_attach_file_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/small"
+                    android:layout_marginLeft="@dimen/small"
+                    android:text="Nome do arquivo"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_mini"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/small">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/small"
+                    android:layout_marginLeft="@dimen/small"
+                    android:layout_weight="1"
+                    android:text="@string/name_mot"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_mini"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/small"
+                    android:layout_marginLeft="@dimen/small"
+                    android:text="21:45 AM"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_mini"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/small"
+                    android:layout_marginLeft="@dimen/small"
+                    android:text="06/12/2018"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_mini"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView_iconSent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginStart="@dimen/small"
+                    android:layout_marginLeft="@dimen/small"
+                    app:srcCompat="@drawable/ic_done_black_24dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

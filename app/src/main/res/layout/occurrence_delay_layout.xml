@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/second_collor"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small"
+        android:background="@drawable/backgraund_card"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="@string/occurrence_delay_one_click_title"
+            android:textSize="@dimen/label_sub_title"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/activity_report_occurrence_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black" />
+
+
+        <LinearLayout
+            android:id="@+id/occurrence_delay_layout_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/medium"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/occurrence_delay_image_30m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/img_desc_30_min_delay"
+                    android:src="@mipmap/ic_occurrence_delay_30m" />
+
+                <ImageView
+                    android:id="@+id/occurrence_delay_image_1h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/img_desc_1h_delay"
+                    android:src="@mipmap/ic_occurrence_delay_1h" />
+
+                <ImageView
+                    android:id="@+id/occurrence_delay_image_2h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/img_desc_2h_delay"
+                    android:src="@mipmap/ic_occurrence_delay_2h" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/medium"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/occurrence_delay_image_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/other_value_50"
+                    android:layout_marginRight="@dimen/other_value_50"
+                    android:textAllCaps="false"
+                    android:background="@drawable/button_rounded"
+                    android:text="@string/occurrence_delay_other_value"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/occurrence_delay_layout_others"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/medium"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:text="@string/occurrence_delay_hours"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <NumberPicker
+                        android:id="@+id/occurrence_delay_hours"
+                        android:layout_width="match_parent"
+                        android:theme="@style/AppTheme.Picker"
+                        android:divider="@color/white"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        tools:ignore="NestedWeights" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/occurrence_delay_minutes"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <NumberPicker
+                        android:id="@+id/occurrence_delay_minutes"
+                        android:layout_width="match_parent"
+                        android:theme="@style/AppTheme.Picker"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:isScrollContainer="true"
+                        tools:ignore="NestedWeights" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/occurrence_delay_button_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/medium"
+                android:layout_marginRight="@dimen/medium"
+                android:background="@drawable/button_rounded"
+                android:text="@string/occurrence_delay_save"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

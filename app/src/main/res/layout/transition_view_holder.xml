@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".transition.TransitionViewHolder">
+
+    <data>
+
+        <import type="android.support.v4.content.ContextCompat" />
+
+        <import type="br.com.neolog.monitoring.monitorable.model.api.transition.TransitionStatus" />
+
+        <variable
+            name="monitorable"
+            type="br.com.neolog.monitoring.monitorable.model.rest.RestMonitorable" />
+
+        <variable
+            name="transition"
+            type="br.com.neolog.monitoring.monitorable.model.rest.transition.RestTransition" />
+    </data>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/medium">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/big"
+                android:background="@drawable/degrade_card_child_stop"
+                android:padding="@dimen/small"
+                android:layout_marginStart="@dimen/big">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_card_blue"
+                    android:padding="@dimen/medium">
+
+                    <TextView
+                        android:id="@+id/transition_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/labels_text_size"
+                        android:layout_marginLeft="@dimen/labels_text_size"
+                        android:text="@{transition.name}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/label_sub_title"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@id/imageView_iconCheckArrival"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Chegada" />
+
+                    <ImageView
+                        android:id="@+id/imageView_iconCheckArrival"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@{TransitionStatus.IN_EXECUTION.equals(transition.status) ? @drawable/empty : (TransitionStatus.FINALIZED.equals(transition.status) ? @drawable/ic_done_black_24dp : @drawable/ic_transition_not_realized)}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/monitorable_code"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@drawable/ic_done_black_24dp"
+                        android:contentDescription="@{TransitionStatus.IN_EXECUTION.equals(transition.status) ? @string/img_desc_transition_in_execution : (TransitionStatus.FINALIZED.equals(transition.status) ? @string/img_desc_transition_finalized : @string/img_desc_transition_not_realized)}" />
+
+                    <TextView
+                        android:id="@+id/monitorable_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{monitorable.type}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/label_normal"
+                        app:layout_constraintEnd_toStartOf="@+id/monitorable_code"
+                        app:layout_constraintStart_toStartOf="@id/transition_name"
+                        app:layout_constraintTop_toBottomOf="@id/transition_name"
+                        tools:text="Viagem" />
+
+                    <TextView
+                        android:id="@+id/monitorable_code"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:text="@{monitorable.code}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/label_normal"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView_iconCheckArrival"
+                        app:layout_constraintStart_toEndOf="@+id/monitorable_type"
+                        app:layout_constraintTop_toTopOf="@id/monitorable_type"
+                        tools:text="1234654687" />
+
+                    <TextView
+                        android:id="@+id/transition_arrival"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{transition.finalizedTimestamp ?? transition.estimatedTimestamp}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/label_normal"
+                        app:layout_constraintStart_toStartOf="@id/transition_name"
+                        app:layout_constraintTop_toBottomOf="@id/monitorable_type"
+                        tools:text="31/10/18 10:00" />
+                </android.support.constraint.ConstraintLayout>
+            </FrameLayout>
+        </LinearLayout>
+</layout>

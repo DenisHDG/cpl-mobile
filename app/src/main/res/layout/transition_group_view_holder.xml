@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".transition.TransitionGroupViewHolder">
+
+    <data>
+
+        <import type="android.support.v4.content.ContextCompat" />
+
+        <variable
+            name="collapsed"
+            type="boolean" />
+
+        <variable
+            name="transitionGroup"
+            type="br.com.neolog.cplmobile.transition.TransitionGroup" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium"
+        android:background="@drawable/degrade_backgraund_rounded"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/medium">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout_relativeLayout_backgraud_card_white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_card_white"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        android:id="@+id/transition_group_index"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/medium"
+                        android:layout_marginLeft="@dimen/medium"
+                        android:gravity="center_horizontal"
+                        android:text="@{String.valueOf(transitionGroup.index + 1)}"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/title"
+                        android:textStyle="bold"
+                        tools:text="1" />
+
+                    <ImageView
+                        android:id="@+id/imageView_arrowCloseOpen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/expand"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@{collapsed ? @drawable/ic_arrow_drop_blue : @drawable/ic_arrow_drop}"
+                        tools:srcCompat="@drawable/ic_arrow_drop_blue" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="57dp"
+                    android:layout_marginLeft="57dp"
+                    android:layout_marginEnd="@dimen/dimen_card_check"
+                    android:layout_marginRight="@dimen/dimen_card_check"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/transition_group_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/small"
+                        android:layout_marginRight="@dimen/small"
+                        android:text="@{transitionGroup.address}"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/label_sub_title"
+                        tools:text="Av. Luiz Carlos Berrini, 1681, Cj. 142" />
+
+                    <TextView
+                        android:id="@+id/transition_group_arrival"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/small"
+                        android:layout_marginLeft="@dimen/small"
+                        android:text="@{transitionGroup.estimatedArrival}"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/label_normal"
+                        app:layout_constraintEnd_toEndOf="@id/transition_group_address"
+                        tools:text="31/10/18 10:00" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/linearLayout_details"
+                    android:layout_alignRight="@+id/linearLayout_details"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="@dimen/medium"
+                    android:layout_marginRight="@dimen/medium"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView_iconCheckArrival"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/check"
+                        android:src="@{transitionGroup.status}"
+                        tools:src="@drawable/ic_done_all_black_24dp" />
+
+                    <ImageView
+                        android:id="@+id/transition_group_late_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/medium"
+                        android:contentDescription="@{transitionGroup.lateStatus}"
+                        android:src="@{transitionGroup.lateStatus}"
+                        tools:src="@drawable/icon_circulo_verde" />
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.constraint.ConstraintLayout>
+    </FrameLayout>
+</layout>

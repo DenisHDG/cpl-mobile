@@ -1,0 +1,19 @@
+include ':app'
+
+gradle.allprojects {
+    buildscript {
+        repositories {
+            maven {
+                url "http://vm-appint01.neolog.com.br:12080/nexus/content/groups/public"
+            }
+            mavenLocal()
+        }
+    }
+
+    repositories {
+        maven {
+            url "http://vm-appint01.neolog.com.br:12080/nexus/content/groups/public"
+        }
+        mavenLocal()
+    }
+}

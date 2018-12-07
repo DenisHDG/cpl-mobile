@@ -1,0 +1,125 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'io.fabric'
+
+apply from: "$project.rootDir/config/findbugs.gradle"
+apply from: "$project.rootDir/config/pmd.gradle"
+apply from: "$project.rootDir/config/coverage.gradle"
+apply from: "$project.rootDir/config/roomSchema.gradle"
+
+// resolução de conflitos entre versões de bibliotecas indiretamente importadas
+configurations {
+    all {
+        resolutionStrategy {
+            force 'org.checkerframework:checker-compat-qual:2.5.3'
+            force 'com.google.errorprone:error_prone_annotations:2.3.1'
+        }
+    }
+    implementation {
+        exclude group: 'com.google.code.findbugs', module: 'annotations'
+    }
+}
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "br.com.neolog.cplmobile"
+        minSdkVersion 16
+        targetSdkVersion 28
+        // sempre que for feita uma release, é necessário incrementar o versionCode
+        // sempre que incrementar o versionCode, incrementar o minor do versionName
+        versionCode 201
+        versionName "2.0.201"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        buildConfigField "String", "JOB_NAME", "\"" + (System.getenv("JOB_NAME") ?: "DEV") + "\""
+        buildConfigField "String", "BUILD_NUMBER", "\"" + (System.getenv("BUILD_NUMBER") ?: "DEV") + "\""
+        buildConfigField "String", "BUILD_URL", "\"" + (System.getenv("BUILD_URL") ?: "DEV") + "\""
+
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // manter dependências por ordem de fase e ordem alfabética
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+    annotationProcessor "com.google.dagger:dagger-android-processor:2.16"
+    annotationProcessor "com.google.dagger:dagger-compiler:2.16"
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc1'
+
+    // manter dependências por ordem de fase e ordem alfabética
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.6'
+    implementation 'com.facebook.stetho:stetho:1.5.0'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-joda:2.9.7'
+    implementation 'com.firebase:firebase-jobdispatcher:0.8.5'
+    implementation 'com.github.clans:fab:1.6.4'
+    implementation 'com.github.ganfra:material-spinner:2.0.0'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+    implementation 'com.google.dagger:dagger-android-support:2.16'
+    implementation 'com.google.dagger:dagger-android:2.16'
+    implementation 'com.google.dagger:dagger:2.16'
+    implementation 'com.google.firebase:firebase-core:16.0.5'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    implementation 'com.google.firebase:firebase-perf:16.2.0'
+    implementation 'com.google.guava:guava:26.0-android'
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation 'com.jakewharton:butterknife:9.0.0-rc1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    implementation 'com.squareup.retrofit2:converter-jackson:2.4.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'neolog:exception-message:1.0.6'
+    implementation 'neolog:monitoring-model-all:1.0.255'
+    implementation 'neolog:neolog-jackson-enum-module:1.0.2'
+    implementation 'neolog:trackingmobile-api:1.0.0'
+
+    // manter dependências por ordem de fase e ordem alfabética
+    testImplementation "org.robolectric:multidex:3.4.2"
+    testImplementation "org.robolectric:robolectric:3.8"
+    testImplementation 'android.arch.core:core-testing:1.1.1'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.assertj:assertj-core:3.11.1'
+    testImplementation 'org.mockito:mockito-core:2.22.0'
+
+    // manter dependências por ordem de fase e ordem alfabética
+    androidTestImplementation 'android.arch.core:core-testing:1.1.1'
+    androidTestImplementation 'android.arch.persistence.room:testing:1.1.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-idling-resource:3.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-contrib:3.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-intents:3.0.2'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.google.truth:truth:0.42'
+    androidTestImplementation 'org.assertj:assertj-core:3.11.1'
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#D81B60</color>
+    <color name="neutral_grey">#DEDDDD</color>
+    <color name="background_grey">#FAFAFA</color>
+    <color name="black">#111111</color>
+    <color name="red">#FF0000</color>
+    <color name="grey">#D1D1D1</color>
+
+    <!-- cores neolog-->
+    <color name="primary_collor">#25B99A</color>
+    <color name="second_collor">#165DA4</color>
+    <color name="third_collor">#016735</color>
+    <color name="white">#FFFFFF</color>
+</resources>

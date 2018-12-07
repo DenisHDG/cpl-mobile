@@ -1,0 +1,241 @@
+{
+  "project_info": {
+    "project_number": "47166081849",
+    "firebase_url": "https://cpl-mobile-45259.firebaseio.com",
+    "project_id": "cpl-mobile-45259",
+    "storage_bucket": "cpl-mobile-45259.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47166081849:android:e3d6b1f57285d074",
+        "android_client_info": {
+          "package_name": "br.com.neolog.cplmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47166081849-b7p6fh5iht7tkck9uuak52hh84btmjo9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.neolog.cplmobile",
+            "certificate_hash": "5e40671c77029ddf6fd014b38341e6c98f1747be"
+          }
+        },
+        {
+          "client_id": "47166081849-3j3rrkgj6iiffp9l67qhvpk7v2ikdivp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaOMFicYRvmfaoGW6KvnO4_W-UONoy-TU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47166081849-3j3rrkgj6iiffp9l67qhvpk7v2ikdivp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47166081849:android:bd384ce23b39abfe",
+        "android_client_info": {
+          "package_name": "br.com.neolog.cplmobile.label"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47166081849-3j3rrkgj6iiffp9l67qhvpk7v2ikdivp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaOMFicYRvmfaoGW6KvnO4_W-UONoy-TU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47166081849:android:0d55f3a526c9e9a6",
+        "android_client_info": {
+          "package_name": "br.com.neolog.cplmobile.wfa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47166081849-3j3rrkgj6iiffp9l67qhvpk7v2ikdivp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaOMFicYRvmfaoGW6KvnO4_W-UONoy-TU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47166081849:android:17edbb20ee9236a1",
+        "android_client_info": {
+          "package_name": "br.com.neolog.tracking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47166081849-3j3rrkgj6iiffp9l67qhvpk7v2ikdivp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaOMFicYRvmfaoGW6KvnO4_W-UONoy-TU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47166081849:android:110f4dc7970f3104",
+        "android_client_info": {
+          "package_name": "com.ionicframework.trackingmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47166081849-3j3rrkgj6iiffp9l67qhvpk7v2ikdivp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaOMFicYRvmfaoGW6KvnO4_W-UONoy-TU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47166081849:android:2b450ee35f5fd415",
+        "android_client_info": {
+          "package_name": "com.ionicframework.trackingmobile.label"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47166081849-3j3rrkgj6iiffp9l67qhvpk7v2ikdivp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaOMFicYRvmfaoGW6KvnO4_W-UONoy-TU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47166081849:android:10155b9017d4ca25",
+        "android_client_info": {
+          "package_name": "com.ionicframework.trackingmobile.wfa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47166081849-3j3rrkgj6iiffp9l67qhvpk7v2ikdivp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaOMFicYRvmfaoGW6KvnO4_W-UONoy-TU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

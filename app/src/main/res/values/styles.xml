@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primary_collor</item>
+        <item name="colorPrimaryDark">@color/primary_collor</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--Error: android:windowLightNavigationBar requires API level 27 (current min is 16) [NewApi]-->
+        <!--<item name="android:windowLightNavigationBar">false</item>-->
+    </style>
+
+    <style name="Splash" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.Picker" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/second_collor</item>
+        <item name="colorControlNormal">@color/second_collor</item>
+    </style>
+</resources>

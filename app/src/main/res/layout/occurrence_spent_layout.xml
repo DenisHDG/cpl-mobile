@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/second_collor"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small"
+        android:background="@drawable/backgraund_card"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="@string/occurrence_spent_one_click_title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/label_sub_title"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/activity_report_occurrence_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black" />
+
+
+        <LinearLayout
+            android:id="@+id/occurrence_spent_layout_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/medium"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/occurrence_spent_image_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/img_desc_spent_20"
+                    android:src="@mipmap/ic_occurrence_spent_20" />
+
+                <ImageView
+                    android:id="@+id/occurrence_spent_image_50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/img_desc_spent_50"
+                    android:src="@mipmap/ic_occurrence_spent_50" />
+
+                <ImageView
+                    android:id="@+id/occurrence_spent_image_100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/img_desc_spent_100"
+                    android:src="@mipmap/ic_occurrence_spent_100" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/medium"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/occurrence_spent_image_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/other_value_50"
+                    android:layout_marginRight="@dimen/other_value_50"
+                    android:background="@drawable/button_rounded"
+                    android:text="@string/occurrence_spent_other_value"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/occurrence_spent_layout_others"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/medium"
+                android:layout_weight="0.25"
+                android:textColorHint="@color/second_collor"
+                android:outlineAmbientShadowColor="@color/second_collor"
+                android:outlineSpotShadowColor="@color/second_collor"
+                app:boxStrokeColor="@color/second_collor"
+                app:counterTextAppearance="@style/MyAppearance"
+                app:hintTextAppearance="@style/MyAppearance"
+                app:passwordToggleDrawable="@drawable/ic_remove_red_eye_black_24dp"
+                app:passwordToggleEnabled="false">
+
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/occurrence_spent_input_edit_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/occurrence_spent_value"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/second_collor"
+                    android:textCursorDrawable="@drawable/cursor_color" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/occurrence_spent_button_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/medium"
+                android:layout_marginRight="@dimen/medium"
+                android:background="@drawable/button_rounded"
+                android:text="@string/occurrence_spent_save"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

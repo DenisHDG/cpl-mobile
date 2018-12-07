@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background_grey"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_trip"
+            android:icon="@mipmap/caminhao"
+            android:title="@string/monitorable_type_trip"
+            android:visible="false"/>
+        <item
+            android:id="@+id/nav_document"
+            android:icon="@mipmap/document"
+            android:title="@string/monitorable_type_document"
+            android:visible="false"/>
+        <item
+            android:id="@+id/nav_invoice"
+            android:icon="@drawable/ic_assignment_black_24dp"
+            android:title="@string/monitorable_type_invoice"
+            android:visible="false"/>
+        <item
+            android:id="@+id/nav_historic"
+            android:icon="@drawable/ic_access_time_black_24dp"
+            android:title="@string/historic" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@mipmap/ic_exit_app"
+            android:title="@string/logout" />
+    </group>
+
+    <!--<item android:title="Communicate">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:icon="@drawable/ic_share_black_24dp"-->
+                <!--android:title="Compartilhar" />-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>

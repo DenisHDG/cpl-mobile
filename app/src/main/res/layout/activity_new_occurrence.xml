@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="occurrenceCategory"
+            type="br.com.neolog.cplmobile.occurrence.NewOccurrenceActivity" />
+
+        <variable
+            name="occurrenceCause"
+            type="br.com.neolog.cplmobile.occurrence.cause.OccurrenceCause" />
+    </data>
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary_collor"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="@dimen/small"
+                android:text="@string/new_occurrence"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/small"
+            android:baselineAligned="false"
+            android:layout_marginTop="@dimen/small"
+            android:layout_marginRight="@dimen/medium"
+            android:layout_marginEnd="@dimen/medium"
+            android:layout_marginStart="@dimen/medium"
+            android:layout_marginLeft="@dimen/medium"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_gravity="center"
+                    android:text="@string/category"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_normal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_categoryOcurrence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small"
+                    android:layout_marginLeft="@dimen/small"
+                    android:gravity="start"
+                    android:text="@string/cause"
+                    android:textColor="@color/second_collor"
+                    android:textSize="@dimen/label_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_gravity="center"
+                    android:text="@string/cause"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/label_normal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_causeOcurrence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cause"
+                    android:layout_marginStart="@dimen/small"
+                    android:layout_marginLeft="@dimen/small"
+                    android:textColor="@color/second_collor"
+                    android:textSize="@dimen/label_normal" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/activity_report_occurrence_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/primary_collor" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/medium"
+                android:background="@drawable/backgraund_card"
+                android:orientation="vertical"
+                android:padding="@dimen/small">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_quantityImpact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/medium"
+                        android:layout_weight="0.25"
+                        android:textColorHint="@color/second_collor"
+                        android:outlineAmbientShadowColor="@color/second_collor"
+                        android:outlineSpotShadowColor="@color/second_collor"
+                        app:boxStrokeColor="@color/second_collor"
+                        app:counterTextAppearance="@style/MyAppearance"
+                        app:hintTextAppearance="@style/MyAppearance"
+                        app:passwordToggleDrawable="@drawable/ic_remove_red_eye_black_24dp"
+                        app:passwordToggleEnabled="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/textInputEditText_quantityImpact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cursorVisible="true"
+                            android:hint="@string/quantityImpact"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/second_collor"
+                            android:textCursorDrawable="@drawable/cursor_color" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.75"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView_impactQuantity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/occurrence_delay"
+                            android:textColor="@color/red"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_impactQuantity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:checked="true"
+                                android:gravity="center"
+                                android:padding="@dimen/small"
+                                android:scaleX="1.5"
+                                android:scaleY="1.5"
+                                android:theme="@style/MyAppearanceSwitch" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_financialImpact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/medium"
+                        android:layout_weight="0.25"
+                        android:orientation="vertical"
+                        android:textColorHint="@color/second_collor"
+                        android:outlineAmbientShadowColor="@color/second_collor"
+                        android:outlineSpotShadowColor="@color/second_collor"
+                        app:boxStrokeColor="@color/second_collor"
+                        app:counterTextAppearance="@style/MyAppearance"
+                        app:hintTextAppearance="@style/MyAppearance"
+                        app:passwordToggleDrawable="@drawable/ic_remove_red_eye_black_24dp"
+                        app:passwordToggleEnabled="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/textInputEditText_financeImpact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cursorVisible="true"
+                            android:hint="@string/financial_impac"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/second_collor"
+                            android:textCursorDrawable="@drawable/cursor_color" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.75"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView_impactFinancial"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/occurrence_delay"
+                            android:textColor="@color/red"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/switch_impactFinancial"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:checked="true"
+                                android:gravity="center"
+                                android:padding="@dimen/small"
+                                android:scaleX="1.5"
+                                android:scaleY="1.5"
+                                android:theme="@style/MyAppearanceSwitch" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_temporalImpact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/temporalImpact"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/label_sub_title" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line"
+                        android:layout_marginBottom="@dimen/small"
+                        android:background="@color/black"
+                        android:focusable="false" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/small"
+                        android:baselineAligned="false"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/occurrence_delay_days"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <NumberPicker
+                                android:id="@+id/numberPicker_days"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:divider="@color/black"
+                                android:theme="@style/AppTheme.Picker" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/occurrence_delay_hours"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <NumberPicker
+                                android:id="@+id/numberPicker_hours"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:isScrollContainer="true"
+                                android:textColor="@color/black"
+                                android:theme="@style/AppTheme.Picker" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/occurrence_delay_minutes"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <NumberPicker
+                                android:id="@+id/numberPicker_minutes"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:isScrollContainer="true"
+                                android:textColor="@color/black"
+                                android:theme="@style/AppTheme.Picker" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView_impactTemporal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/occurrence_delay"
+                                android:textColor="@color/red"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/small"
+                                android:layout_marginLeft="@dimen/small"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <android.support.v7.widget.SwitchCompat
+                                    android:id="@+id/switch_impactTemporal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:checked="true"
+                                    android:gravity="center"
+                                    android:padding="@dimen/small"
+                                    android:scaleX="1.5"
+                                    android:scaleY="1.5"
+                                    android:theme="@style/MyAppearanceSwitch" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/medium"
+                    android:textColorHint="@color/second_collor"
+                    android:outlineAmbientShadowColor="@color/second_collor"
+                    android:outlineSpotShadowColor="@color/second_collor"
+                    app:boxStrokeColor="@color/second_collor"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="1000"
+                    app:counterTextAppearance="@style/MyAppearance"
+                    app:hintTextAppearance="@style/MyAppearance"
+                    app:passwordToggleDrawable="@drawable/ic_remove_red_eye_black_24dp"
+                    app:passwordToggleEnabled="false">
+
+                    <EditText
+                        android:id="@+id/input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:hint="@string/add_coment"
+                        android:inputType="textMultiLine"
+                        android:lines="3"
+                        android:maxLength="1000"
+                        android:maxLines="5"
+                        android:minLines="3"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/second_collor"
+                        android:textCursorDrawable="@drawable/cursor_color" />
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/medium"
+                    android:layout_marginEnd="@dimen/medium"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout_choseFile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/small"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_card_white"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imageView_cancelChoseFile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/cancel"
+                            app:srcCompat="@drawable/ic_cancel_white_24dp" />
+
+                        <ImageView
+                            android:id="@+id/imageView_choseFile"
+                            android:layout_width="150dp"
+                            android:layout_height="100dp"
+                            android:layout_marginBottom="@dimen/small"
+                            android:contentDescription="@string/choose_file"
+                            android:padding="@dimen/small" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout_takePicture"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/small"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_card_white"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imageView_cancelTakePicture"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/cancel"
+                            app:srcCompat="@drawable/ic_cancel_white_24dp" />
+
+                        <ImageView
+                            android:id="@+id/imageView_takePicture"
+                            android:layout_width="150dp"
+                            android:layout_height="100dp"
+                            android:layout_marginBottom="@dimen/small"
+                            android:contentDescription="@string/take_picture" />
+
+                    </LinearLayout>
+
+                    <include layout="@layout/iten_list_images"></include>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/medium"
+                    android:layout_marginEnd="@dimen/medium"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <Button
+                            android:id="@+id/button_uploadImageOccurrence"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/small"
+                            android:layout_marginRight="@dimen/small"
+                            android:background="@drawable/button_rounded_files"
+                            android:drawableStart="@drawable/ic_note_add_black_24dp"
+                            android:drawableLeft="@drawable/ic_note_add_black_24dp"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:padding="@dimen/small"
+                            android:text="@string/choose_file"
+                            android:textSize="@dimen/label_mini" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/button_photo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/small"
+                            android:layout_marginLeft="@dimen/small"
+                            android:background="@drawable/button_rounded_files"
+                            android:drawableStart="@drawable/ic_camera_alt_black_24dp"
+                            android:drawableLeft="@drawable/ic_camera_alt_black_24dp"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:padding="@dimen/small"
+                            android:text="@string/take_picture"
+                            android:textSize="@dimen/label_mini" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button_saveOccurrence"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small"
+                    android:layout_marginBottom="@dimen/medium"
+                    android:background="@drawable/button_rounded"
+                    android:gravity="center"
+                    android:text="@string/save"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/label_normal" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

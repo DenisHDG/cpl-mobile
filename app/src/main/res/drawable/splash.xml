@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/white"/> <!--aqui pode ser qualquer coisa, até uma imagem-->
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/logo_cockpit_logistico"/>
+    </item>
+</layer-list>

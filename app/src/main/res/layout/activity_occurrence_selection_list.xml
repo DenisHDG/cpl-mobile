@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="occurrenceCategory"
+            type="br.com.neolog.cplmobile.occurrence.category.OccurrenceCategory" />
+
+        <variable
+            name="occurrenceCause"
+            type="br.com.neolog.cplmobile.occurrence.cause.OccurrenceCause" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small"
+        android:layout_marginTop="@dimen/small"
+        android:layout_marginEnd="@dimen/small"
+        android:background="@drawable/backgraund_card"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/activity_report_occurrence_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+
+            <ImageView
+                android:id="@+id/activity_report_occurrence_list_image_view_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small"
+                android:layout_marginLeft="@dimen/small"
+                android:layout_gravity="center"
+                android:background="@drawable/round_image"
+                app:srcCompat="@drawable/ic_camera_alt_black_24dp"
+                android:padding="@dimen/medium" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="@dimen/small"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/activity_report_occurrence_list_text_view_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/category"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/label_normal"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/activity_report_occurrence_list_text_view_category_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/small"
+                        android:layout_marginStart="@dimen/small"
+                        android:text="@{occurrenceCategory.name}"
+                        android:textColor="@color/second_collor"
+                        android:textSize="@dimen/label_normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="@dimen/small"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/activity_report_occurrence_list_text_view_cause"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/cause"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/label_normal"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/activity_report_occurrence_list_text_view_cause_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/small"
+                        android:layout_marginStart="@dimen/small"
+                        android:text="@{occurrenceCause.name}"
+                        android:textColor="@color/second_collor"
+                        android:textSize="@dimen/label_normal" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/activity_report_occurrence_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/small"
+            android:background="@drawable/degrade_divisor" />
+
+    </LinearLayout>
+</layout>

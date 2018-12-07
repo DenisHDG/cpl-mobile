@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/neutral_grey"
+    android:orientation="vertical"
+    tools:context=".occurrence.comments.OccurrenceCommentsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary_collor"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/small"
+            android:text="@string/comments"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_comments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="70dp"
+        android:background="@color/neutral_grey"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        tools:itemCount="10"
+        tools:listitem="@layout/iten_comment_left" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small"
+            android:layout_weight="1"
+            android:background="@drawable/card_comments"
+            android:orientation="horizontal"
+            android:padding="@dimen/small">
+
+            <ImageView
+                android:id="@+id/imageView_iconFileComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:contentDescription="@string/comments"
+                android:padding="2dp"
+                app:srcCompat="@drawable/ic_attach_file_black_36dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:hint="@string/write_comment"
+                android:maxLines="6"
+                android:scrollbars="vertical"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@drawable/cursor_color" />
+
+        </LinearLayout>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/floatingActionButton_send"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_send"
+            app:fab_colorNormal="@color/second_collor"
+            app:fab_colorPressed="@color/second_collor"
+            app:fab_colorRipple="@color/white"
+            app:fab_label="@string/finish_monitorable"
+            app:rippleColor="@color/white" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
